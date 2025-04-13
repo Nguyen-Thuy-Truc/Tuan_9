@@ -93,25 +93,7 @@ ALTER TABLE HoaDon WITH CHECK ADD CONSTRAINT [DF_HoaDon_LoaiHD] DEFAULT 'N' FOR 
 ALTER TABLE HoaDon ADD CONSTRAINT [HD_CK_3] CHECK (([NgayGiao]>=[NgayLapHD]))
 
 --TUAN 9 
---1) Xóa hết các dữ liệu đang có trong các Table của cơ sở dữ liệu QLBH bằng lệnh
---Delete
-DELETE FROM CT_HoaDon
-DELETE FROM HoaDon
-DELETE FROM SanPham
-DELETE FROM NhomSanPham
-DELETE FROM NhaCungCap
-DELETE FROM KhachHang
-DELETE FROM NhanVien
 
---2) Trong trường hợp nào thì không xóa được dữ liệu bảng SanPham khi chưa xóa
---dữ liệu bảng con của SanPham?
-
---3) Nếu bạn muốn xóa bất kỳ Bảng cha thì xóa luôn các bảng quan hệ thì bạn phải
---làm gì? Bạn thực hiện một ví dụ minh họa
-
-
---4) Dùng lệnh Insert thêm vào mỗi bảng của CSDL QLBH 5 record với nội dung do
---sinh viên tự nghĩ
 INSERT INTO NhomSanPham(MaNhom, TenNhom) VALUES
 (1, 'RAU'),
 (2, 'KEO'),
